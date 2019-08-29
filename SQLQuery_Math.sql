@@ -3,5 +3,5 @@ GO
 
 SELECT InvoiceNumber, 
 	InvoiceTotal - PaymentTotal - CreditTotal 
-	AS BalanceDue
-	FROM Invoices
+	AS [Balance Due]
+	FROM Invoices;
