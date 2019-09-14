@@ -7,7 +7,7 @@ the total amount collected in shipping fees.
 */
 
 SELECT COUNT(*) AS [Orders Placed],
-	FORMAT(SUM(ShipAmount), 'C') AS [Shipping Fees]
+	FORMAT(SUM(ShipAmount), 'C') AS [Total Shipping Fees]
 	FROM Orders;
 
 
@@ -47,3 +47,12 @@ SELECT DISTINCT Products.ProductID,
 more than one product. Create a query that returns the email address and 
 the number of distinct products from the customer’s orders. 
 */
+
+SELECT Customers.EmailAddress AS [Customer E-mail],
+	COUNT(OrderItems.ItemID) AS [Distinct Products Ordered]
+	FROM Customers JOIN Orders
+		ON Customers.CustomerID = Orders.CustomerID
+		JOIN OrderItems
+			ON Orders.OrderID = OrderItems.OrderID
+	GROUP BY Customers.EmailAddress
+	ORDER BY Customers.EmailAddress;
