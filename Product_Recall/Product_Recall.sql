@@ -20,7 +20,7 @@ SELECT
 -- and the total amount spent this way.
 SELECT COUNT(Orders.OrderID) AS [Number of Customers Affected],
 	SUM(OrderItems.Quantity) AS [Total Amount of #2's purchased],
-	FORMAT(SUM(OrderItems.ItemPrice * OrderItems.Quantity), 'C') AS [Total Cost]
+	FORMAT(SUM((OrderItems.ItemPrice - OrderItems.DiscountAmount) * OrderItems.Quantity), 'C') AS [Total Cost]
 	FROM Orders JOIN OrderItems
 		ON Orders.OrderID = OrderItems.OrderID
 		JOIN Customers
