@@ -31,6 +31,13 @@ Write a query that returns those unique discount percentages and
 the associated product name.
 */
 
+-- I'm a little stuck on this one. This query
+-- returns the number of products per discount type,
+-- but not their names, and it doesn't eliminate any altogether.
+SELECT COUNT(ProductID) AS [Instances],
+	DiscountPercent
+	FROM Products
+GROUP BY DiscountPercent;
 
 
 /*4.	An account manager is trying to find out his customer’s oldest orders. 
@@ -38,3 +45,5 @@ Create a query for the report that will return one row per customer that
 contains the customer’s full name as a single column, customer’s email address, 
 orderID, and OrderDate for the customer’s oldest order.
 */
+
+SELECT * FROM Customers;
