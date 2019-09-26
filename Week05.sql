@@ -38,17 +38,3 @@ SELECT ProductName, DiscountPercent
 	GROUP BY DiscountPercent
 	HAVING (COUNT(DiscountPercent) = 1))
 	ORDER BY DiscountPercent;
-
-/*4.	An account manager is trying to find out his customer’s oldest orders. 
-Create a query for the report that will return one row per customer that 
-contains the customer’s full name as a single column, customer’s email address, 
-orderID, and OrderDate for the customer’s oldest order.
-*/
-
-SELECT LastName + ', ' + FirstName AS [Name],
-	EmailAddress AS [E-mail]
-	FROM Customers JOIN Orders
-		ON Customers.CustomerID = Orders.CustomerID
-	ORDER BY LastName;
-
-SELECT MIN(OrderDate), CustomerID FROM Orders GROUP BY CustomerID;
