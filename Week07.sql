@@ -1,7 +1,11 @@
+USE dj0803805;
+GO
+
 /*1.	The Guitar Shop is going to start carrying cases as part of their inventory. 
 Write the statement needed to add Cases to the categories in the database. 
 Code the INSERT statement so SQL Server automatically generates the value for the CategoryID column.
 */
+
 
 /*2.	During a meeting, it was decided that instead of Cases, 
 the Guitar Shop would start using the term Guitar Cases for these items. 
