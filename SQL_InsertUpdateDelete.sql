@@ -32,6 +32,59 @@ INSERT INTO InvoicesBackUp
 
 -- Puts additional row(s) into a table (But with the parameter order redefined)
 INSERT INTO InvoicesBackUp
-	(VendorID, InvoiceNumber, InvoiceTOtal, PaymentTotal, CreditTotal, TermsID, InvoiceDate, InvoiceDueDate)
+	(VendorID, InvoiceNumber, InvoiceTotal, PaymentTotal, CreditTotal, TermsID, InvoiceDate, InvoiceDueDate)
 VALUES 
 	(97, '456789', 8344.50, 0, 0, 1, '2016-04-01', '2016-04-30');
+
+/*******************************
+================================
+WARNING
+
+DO NOT RUN THE WHOLE QUERY
+
+THINGS WILL GET WEIRD AND BROKEN
+================================
+*******************************/
+
+-- Updates specific rows based on the WHERE clause
+UPDATE InvoicesBackUp
+	SET PaymentDate = '2016-05-21',
+	PaymentTotal = 19351.18
+WHERE InvoiceNumber = '97/522';
+
+UPDATE InvoicesBackUp
+	SET TermsID = 1
+WHERE VendorID = 95;
+
+-- Update with a calculation and a subquery
+UPDATE InvoicesBackUp
+	SET CreditTotal = CreditTotal + 100,
+	InvoiceDueDate = (SELECT MAX(InvoiceDueDate) FROM InvoicesBackUp)
+WHERE InvoiceNumber = '97/522';
+
+SELECT * FROM InvoicesBackUp
+WHERE InvoiceNumber = '97/522';
+
+
+/*******************************
+================================
+WARNING
+
+DO NOT RUN THE WHOLE QUERY
+
+THINGS WILL GET WEIRD AND BROKEN
+================================
+*******************************/
+
+-- Deletes the table's contents (But not the table itself)
+DELETE InvoicesBackUp;
+
+-- Deletes rows based on the WHERE clause
+DELETE InvoicesBackUp
+WHERE InvoiceID = 115;
+
+DELETE InvoicesBackUp
+WHERE VendorID = 37;
+
+SELECT * FROM InvoicesBackUp
+WHERE VendorID = 37;
