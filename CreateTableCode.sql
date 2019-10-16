@@ -1,0 +1,17 @@
+USE dj0803805;
+GO
+
+CREATE TABLE Customers
+(
+	[CustomerId] INT IDENTITY(1, 1) NOT NULL,
+	[FirstName] NVARCHAR(50) NULL,
+	[LastName] NVARCHAR(50) NULL,
+	PRIMARY KEY CLUSTERED ([CustomerId] ASC)
+)
+
+CREATE TABLE Orders
+(
+	[OrderId] INT IDENTITY(1, 1) NOT NULL,
+	[CustomerId] INT NOT NULL,
+	[CarId] INT NOT NULL
+)
