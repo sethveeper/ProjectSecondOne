@@ -1,0 +1,7 @@
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\bin\Debug\AutoLotDataReader.exe.config
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\bin\Debug\AutoLotDataReader.exe
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\bin\Debug\AutoLotDataReader.pdb
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\obj\Debug\AutoLotDataReader.csprojAssemblyReference.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\obj\Debug\AutoLotDataReader.csproj.CoreCompileInputs.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\obj\Debug\AutoLotDataReader.exe
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDataReader\AutoLotDataReader\obj\Debug\AutoLotDataReader.pdb

@@ -1,0 +1,6 @@
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotDAL\bin\Debug\AutoLotDAL.dll
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotDAL\bin\Debug\AutoLotDAL.pdb
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotDAL\obj\Debug\AutoLotDAL.csprojAssemblyReference.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotDAL\obj\Debug\AutoLotDAL.csproj.CoreCompileInputs.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotDAL\obj\Debug\AutoLotDAL.dll
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotDAL\obj\Debug\AutoLotDAL.pdb

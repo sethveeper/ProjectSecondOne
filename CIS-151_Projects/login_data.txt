@@ -3,5 +3,3 @@
 
 250 (SQL) Server: 
 - stusql-cis250-101-fa19.cimq4ah3jd04.us-east-2.rds.amazonaws.com,1433
-
-User Name: dj0803805 Password: 803805

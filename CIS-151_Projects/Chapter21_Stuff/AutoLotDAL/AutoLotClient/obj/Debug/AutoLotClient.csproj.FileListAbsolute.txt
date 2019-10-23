@@ -1,0 +1,10 @@
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\bin\Debug\AutoLotClient.exe.config
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\bin\Debug\AutoLotClient.exe
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\bin\Debug\AutoLotClient.pdb
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\bin\Debug\AutoLotDAL.dll
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\bin\Debug\AutoLotDAL.pdb
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\obj\Debug\AutoLotClient.csprojAssemblyReference.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\obj\Debug\AutoLotClient.csproj.CoreCompileInputs.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\obj\Debug\AutoLotClient.csproj.CopyComplete
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\obj\Debug\AutoLotClient.exe
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\Chapter21_Stuff\AutoLotDAL\AutoLotClient\obj\Debug\AutoLotClient.pdb
