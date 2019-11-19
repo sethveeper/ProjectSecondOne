@@ -1,0 +1,10 @@
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\bin\Debug\DataGridSelection.exe.config
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\bin\Debug\DataGridSelection.exe
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\bin\Debug\DataGridSelection.pdb
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.csprojAssemblyReference.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.Form1.resources
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.Properties.Resources.resources
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.csproj.GenerateResource.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.csproj.CoreCompileInputs.cache
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.exe
+C:\Users\dj0803805\OneDrive - Ozarks Technical Community College\Documents\GitHub\ProjectSecondOne\CIS-151_Projects\DataGridSelection\DataGridSelection\obj\Debug\DataGridSelection.pdb
