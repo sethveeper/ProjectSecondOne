@@ -1,7 +1,23 @@
-/*1.	Write a script that declares a variable and sets it to the count of all products in the Products table. 
-If the count is greater than or equal to 7, the script should display a message that says, 
-“The number of products is greater than or equal to 7”. Otherwise, it should say, “The number of products is less than 7”.
+USE dj0803805;
+GO
+
+/*1.	Write a script that declares a variable and sets it to the count of 
+all products in the Products table. If the count is greater than or equal 
+to 7, the script should display a message that says, “The number of 
+products is greater than or equal to 7”. Otherwise, it should say, 
+“The number of products is less than 7”.
 */
+
+DECLARE @ProductCount int;
+SELECT @ProductCount = COUNT(*) FROM Products;
+
+IF @ProductCount < 7
+	PRINT 'The number of products is less than 7';
+ELSE
+	PRINT 'The number of products is greater than or equal to 7';
+
+PRINT '-------------------------------------------------------';
+GO
 
 /*2.	Write a script that uses two variables to store 
 (1) the count of all of the products in the Products table and 
@@ -11,6 +27,20 @@ a message that displays the values of both variables. Otherwise, the script
 should print a message that says, “The number of products is less than 7”.
 */
 
+DECLARE @ProductCount int;
+SELECT @ProductCount = COUNT(*) FROM Products;
+
+DECLARE @ProductAvgList money;
+SELECT @ProductAvgList = AVG(ListPrice) FROM Products;
+
+IF @ProductCount < 7
+	PRINT 'The number of products is less than 7';
+ELSE
+	PRINT 'The total number of products is: ' + CAST(@ProductCount AS varchar);
+	PRINT 'The average list price is: ' + CAST(@ProductAvgList AS varchar);
+
+PRINT '-------------------------------------------------------';
+GO
 /*3.	Write a script that calculates the common factors between 10 and 20. 
 To find a common factor, you can use the modulo operator (%) to check whether a number 
 can be evenly divided into both numbers. Then, this script should print lines that display the common factors like this: 
