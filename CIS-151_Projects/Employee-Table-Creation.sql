@@ -1,0 +1,47 @@
+USE dj0803805;
+GO
+
+/*
+DROP TABLE e_PartTime;
+DROP TABLE e_FullTime;
+DROP TABLE e_Manager;
+DROP TABLE e_Employees;
+*/
+
+CREATE TABLE e_Employees (
+	EmployeeID INT IDENTITY(1,1) PRIMARY KEY,
+	DateHired DATE NOT NULL,
+	NameFirst VARCHAR(50) NOT NULL,
+	NameLast VARCHAR(50) NOT NULL,
+	SocialSecurity VARCHAR(50) NOT NULL,
+	EmailAddress VARCHAR(50) NOT NULL,
+	PhoneNumber VARCHAR(50) NOT NULL,
+	TaxRate FLOAT(4,4) NOT NULL
+);
+
+/*
+CREATE TABLE e_PartTime (
+	PartTimeID INT IDENTITY(1,1) PRIMARY KEY,
+	EmployeeID INT NOT NULL FOREIGN KEY REFERENCES e_Employees,
+	HourlyRate MONEY NOT NULL,
+	HoursWorked DECIMAL (10,2) NOT NULL
+);
+
+CREATE TABLE e_FullTime (
+	FullTimeID INT IDENTITY(1,1) PRIMARY KEY,
+	EmployeeID INT NOT NULL FOREIGN KEY REFERENCES e_Employees,
+	Salary MONEY NOT NULL,
+	DaysVacation DECIMAL (8,2) NOT NULL,
+	DaysSick DECIMAL (8,2) NOT NULL,
+	TaxExempt BIT NOT NULL,
+	HasInsurance BIT NOT NULL
+);
+
+CREATE TABLE e_Manager (
+	ManagerID INT IDENTITY(1,1) PRIMARY KEY,
+	EmployeeID INT NOT NULL FOREIGN KEY REFERENCES e_Employees,
+	SalaryBonus MONEY NOT NULL,
+	NameDepartment VARCHAR(50) NOT NULL,
+	OfficeLocation VARCHAR(50) NOT NULL
+);
+*/
