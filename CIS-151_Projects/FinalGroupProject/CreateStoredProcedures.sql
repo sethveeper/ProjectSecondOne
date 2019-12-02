@@ -7,27 +7,13 @@ ALTER PROC sp_NewInvoice
 	@Address NVARCHAR(50) = 'ERROR',
 	@City NVARCHAR(50) = 'ERROR',
 	@State NVARCHAR(2) = 'ER',
-	@Zip NVARCHAR(5) = 'ERROR',
-	@NewID INT OUTPUT
+	@Zip NVARCHAR(5) = 'ERROR'
 AS
+	DECLARE @NewID INT;
 	INSERT INTO ex_Invoices (Name, Address, City, State, Zip)
 	VALUES (@Name, @Address, @City, @State, @Zip);
 	SELECT @NewID = (SELECT SCOPE_IDENTITY());
-	-- After creating the new row, it returns that row's ID.
-	-- Hopefully.
-GO
-
--- Creates a new shipping service.
-ALTER PROC sp_NewService
-	@Company NVARCHAR(50) = 'ERROR',
-	@Description NVARCHAR(50) = 'ERROR',
-	@Cost MONEY = 0,
-	@FlatFee BIT = 0,
-	@NewID INT OUTPUT
-AS
-	INSERT INTO ex_Services (Company, Description, Cost, FlatFee)
-	VALUES (@Company, @Description, @Cost, @FlatFee);
-	SELECT @NewID = (SELECT SCOPE_IDENTITY());
+	SELECT * FROM ex_Invoices WHERE InvoiceID = @NewID;
 	-- After creating the new row, it returns that row's ID.
 	-- Hopefully.
 GO
@@ -44,11 +30,13 @@ ALTER PROC sp_NewPackage
 	@Description NVARCHAR(50) = 'ERROR',
 	@Weight DECIMAL(8,4) = 0,
 	@CostPerOunce MONEY = 0,
-	@NewID INT OUTPUT
+	@DaysToShip TINYINT = 2
 AS
-	INSERT INTO ex_Packages (Name, Address, City, State, Zip, Description, Weight, CostPerOunce, InvoiceID, ServiceID)
-	VALUES (@Name, @Address, @City, @State, @Zip, @Description, @Weight, @CostPerOunce, @InvoiceID, @ServiceID);
+	DECLARE @NewID INT;
+	INSERT INTO ex_Packages (Name, Address, City, State, Zip, Description, Weight, CostPerOunce, DaysToShip, InvoiceID)
+	VALUES (@Name, @Address, @City, @State, @Zip, @Description, @Weight, @CostPerOunce, @DaysToShip, @InvoiceID);
 	SELECT @NewID = (SELECT SCOPE_IDENTITY());
+	SELECT * FROM ex_Packages WHERE PackageID = @NewID;
 	-- After creating the new row, it returns that row's ID.
 	-- Hopefully.
 GO
@@ -64,21 +52,21 @@ AS
 GO
 
 -- Gets all packages, or a particular package (By ID).
-ALTER PROC sp_GetServices
-	@Input INT = 0
-AS
-	IF @Input = 0
-		SELECT * FROM ex_Services ORDER BY ServiceID;
-	ELSE
-		SELECT * FROM ex_Services WHERE ServiceID = @Input;
-GO
-
--- Gets all packages, or a particular package (By ID).
 ALTER PROC sp_GetPackages
 	@Input INT = 0
 AS
 	IF @Input = 0
-		SELECT * FROM ex_Packages ORDER BY InvoiceID, ServiceID, PackageID;
+		SELECT * FROM ex_Packages ORDER BY InvoiceID, PackageID;
 	ELSE
 		SELECT * FROM ex_Packages WHERE PackageID = @Input;
+GO
+
+-- Gets all packages by a given InvoiceID.
+ALTER PROC sp_GetPackagesByInvoice
+	@Input INT = 1
+AS
+	IF @Input = 0
+		SELECT @Input = 1;
+
+	SELECT * FROM ex_Packages WHERE InvoiceID = @Input ORDER BY PackageID;
 GO
