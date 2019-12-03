@@ -1,5 +1,0 @@
-151 (C#) Server:
-- stusql-cis151-101-fa19.cimq4ah3jd04.us-east-2.rds.amazonaws.com,1433
-
-250 (SQL) Server: 
-- stusql-cis250-101-fa19.cimq4ah3jd04.us-east-2.rds.amazonaws.com,1433
