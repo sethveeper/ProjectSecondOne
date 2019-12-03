@@ -1,5 +1,3 @@
-https://github.com/sethveeper/ProjectSecondOne/tree/master/CIS-151_Projects/FinalGroupProject
-
 To do this appropriately, please run files in this order:
 
 1- CreateTables.sql
