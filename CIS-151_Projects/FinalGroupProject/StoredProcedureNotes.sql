@@ -16,15 +16,15 @@ EXEC sp_GetPackages
 /* This one's slightly different: It returns all the Package rows belonging to a specific
 InvoiceID. It might not be necessary, I admit, but it's there none the less.
 
-If given an Input of 0 or 1 (Or if it's skipped) it'll return packages belonging to that
+If given an Input of 0 or 1 (Or if it's skipped) it'll return packages belonging to an
 "Error invoice" you'll read about in a minute, if you haven't already.
 */
 EXEC sp_GetPackagesByInvoice
-	@Input = 1;
+	@Input = 3;
 
 
 /* These next two procedures create new rows in their respective tables.
-They each return the new row as part of a SELECT statement. This enables 
+They each optionally return the new row as part of a SELECT statement. This enables 
 you to read from it, for a number of reasons. In particular, it is critically 
 important to grab InvoiceIDs as you create them, so that Packages can be associated 
 with them in the correct manner.
@@ -34,7 +34,9 @@ EXEC sp_NewInvoice
 	@Address = '1234 N Example Str', -- The billing address.
 	@City = 'Flavortown', -- The billing town.
 	@State = 'NY', -- The billing state. MUST BE TWO CHARACTERS
-	@Zip = '12345'; -- The billing ZIP code. MUST BE FIVE CHARACTERS.
+	@Zip = '12345', -- The billing ZIP code. MUST BE FIVE CHARACTERS.
+	@Select = 1; -- If @Select is set to 1, it creates a SELECT statement of the new row.
+	-- It can be skipped if you don't need that, though.
 
 -- Ignore this part.
 DECLARE @MyInvoice INT;
@@ -51,8 +53,9 @@ EXEC sp_NewPackage
 	@Zip = '54321', -- The mailing ZIP code. MUST BE FIVE CHARACTERS.
 	@Description = 'This is an example package.', -- A description of the package.
 	@Weight = 420.69, -- The packages weight (Presumably in ounces?).
-	@CostPerOunce = 3.50,
-	@DaysToShip = 2; -- The cost per ounce.
-
+	@CostPerOunce = 3.50, -- The cost per ounce.
+	@DaysToShip = 2, -- The time to ship.
+	@Select = 1; -- If @Select is set to 1, it creates a SELECT statement of the new row.
+	-- It can be skipped if you don't need that, though.
 
 /* That's all for now. Let me know if changes or additions need made, alright? */

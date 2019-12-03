@@ -7,15 +7,18 @@ ALTER PROC sp_NewInvoice
 	@Address NVARCHAR(50) = 'ERROR',
 	@City NVARCHAR(50) = 'ERROR',
 	@State NVARCHAR(2) = 'ER',
-	@Zip NVARCHAR(5) = 'ERROR'
+	@Zip NVARCHAR(5) = 'ERROR',
+	@Select BIT = 0
 AS
-	DECLARE @NewID INT;
 	INSERT INTO ex_Invoices (Name, Address, City, State, Zip)
 	VALUES (@Name, @Address, @City, @State, @Zip);
-	SELECT @NewID = (SELECT SCOPE_IDENTITY());
-	SELECT * FROM ex_Invoices WHERE InvoiceID = @NewID;
-	-- After creating the new row, it returns that row's ID.
-	-- Hopefully.
+	
+	-- After creating the new row, it makes a SELECT statement for that row.
+	DECLARE @NewID INT;
+	IF (@Select = 1)
+		SELECT @NewID = @@IDENTITY;
+		SELECT * FROM ex_Invoices WHERE InvoiceID = @NewID;
+	-- I hope so, anyways.
 GO
 
 -- Creates a new package.
@@ -30,13 +33,17 @@ ALTER PROC sp_NewPackage
 	@Description NVARCHAR(50) = 'ERROR',
 	@Weight DECIMAL(8,4) = 0,
 	@CostPerOunce MONEY = 0,
-	@DaysToShip TINYINT = 2
+	@DaysToShip TINYINT = 2,
+	@Select BIT = 0
 AS
-	DECLARE @NewID INT;
 	INSERT INTO ex_Packages (Name, Address, City, State, Zip, Description, Weight, CostPerOunce, DaysToShip, InvoiceID)
 	VALUES (@Name, @Address, @City, @State, @Zip, @Description, @Weight, @CostPerOunce, @DaysToShip, @InvoiceID);
-	SELECT @NewID = (SELECT SCOPE_IDENTITY());
-	SELECT * FROM ex_Packages WHERE PackageID = @NewID;
+
+	-- After creating the new row, it makes a SELECT statement for that row.
+	DECLARE @NewID INT;
+	IF (@Select = 1)
+		SET @NewID = @@IDENTITY;
+		SELECT * FROM ex_Packages WHERE PackageID = @NewID;
 	-- After creating the new row, it returns that row's ID.
 	-- Hopefully.
 GO
